@@ -117,6 +117,8 @@ void SLinkedList<T>::moveLastToFront()
 			newTail = newTail->next().get();
 		}
 		this->m_head.swap(this->m_tail->next());
+		m_head.swap(newTail->next());
+		m_tail = newTail;
 		//m_head->setNext(m_tail->next());
 		//std::swap(this->m_head, this->m_tail->next());
 		//this->m_tail.swap(newTail->next());

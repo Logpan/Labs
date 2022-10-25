@@ -48,7 +48,7 @@ int main()
 	}
 
 	list.moveLastToFront();
-	//list.unique();
+	list.unique();
 	//auto i = list.begin();
 	// Output the number of nodes in the list
 	std::cout << "Size : " << list.size() << std::endl;
