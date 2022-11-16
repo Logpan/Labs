@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: 4b10eba2696e70c4fb2565317b391970
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 15
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9d46b6b64c79b468d136fa9e019670
+      internalID: 120700319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 298
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c32a0caf3b8cf49a30f71ea64162df
+      internalID: -589223596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 299
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336c0578a9d29c34c9f9cf0b20330b76
+      internalID: -783495117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_3
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 298
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb59268a0d6590448af17042923af42
+      internalID: 1669216687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_4
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 299
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a75ed7e3728b1644907e8742260fe0c
+      internalID: 1287308680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 298
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b64055c9a6bd6448bf90774f294a28
+      internalID: -678412918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_6
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 298
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d428c98136484684e9ed3ba071a81936
+      internalID: -1680499845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_7
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 299
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b10f738c70a06341b4364445724e57a
+      internalID: -380172332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_8
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 298
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c156b8b16c63e4b89bcfb6163e6ca0
+      internalID: -2027251360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_9
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 130
+        width: 77
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400025b70df09714688969ddb4c866ee
+      internalID: -1121378911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_10
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 130
+        width: 72
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdd01e160e0a7541a9ddde8755c7b92
+      internalID: -353051129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_11
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe5c29b587023247b7bf09e591e022c
+      internalID: -1773204529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_12
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946c5fe689f4dd940b95d2ae30f3ccae
+      internalID: -1665147866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b13824bc2c649478faf1877467f96b
+      internalID: -318763201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_14
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f7eb58da51d394ca88073dba403eca
+      internalID: 690205751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_15
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3082d4b2e314047afddf928089a627
+      internalID: 811012473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_16
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 244
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0dfa6104a08cd43b9e2aa8c5827bc2
+      internalID: 1149906574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_17
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fe5e2bdc2d81e4babf0f6652eec524
+      internalID: 675523158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_18
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 244
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb528678d536054c9eb291db97dde77
+      internalID: -224281197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_19
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 204
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05457399cc1dc284383ee333573ffbb5
+      internalID: -1551671530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_20
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 207
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c211a77f33af64eba38ec08d0b16e7
+      internalID: -1372601218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_21
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 207
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3866c54d631b74d4a9b691c7c01b1869
+      internalID: -510265193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_22
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 207
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac823736f731964696d3fbb4f2179e2
+      internalID: -413409596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 207
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1022dd663bfd74c42afe09c59a240d1a
+      internalID: 686450973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_24
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 207
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f7bb71001063f4fb2bfa5cfdd38c91
+      internalID: -911139940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_25
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 207
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da478bd166d28ff4f963ce823d40466c
+      internalID: -534442081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_26
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 207
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac7dc75d54228b46a25dbdb771a8410
+      internalID: 1304951096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_27
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 198
+        width: 54
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5790af227d55c1f41bd966d8c3707eb3
+      internalID: -1722308113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_28
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 200
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713335f76552b0b4b8c8b9d5c9ddb1a0
+      internalID: -144036554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_29
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 200
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf60ee944ee20724bbf15855cfeb09ce
+      internalID: 1276211240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_30
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 214
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7086ae578cf64d14e97bf0fa801a45ee
+      internalID: 566515549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_31
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 179
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa801904e74f6f4198c0f8a62cdf80c
+      internalID: 1831538229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_32
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 179
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27b6038eb8051749b149a5399e62361
+      internalID: -1704920760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_33
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 200
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c3cab31bc3ce4478eb8dbe21e320d0
+      internalID: 1525609996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_34
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 177
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a564f6aa780301944a1101acfa26b087
+      internalID: -2023045986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_35
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 179
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56467a591c065ed4986f60d409446a92
+      internalID: -845936571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_36
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 179
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1df7095ca8bc9b40bbc26cdb7a867e3
+      internalID: 1507204881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_37
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 179
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f78cccbe0c2c1a4e8edb68154d379ff
+      internalID: -1408965504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_38
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 179
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd25e620899f919449f1ae9bf8cef9f3
+      internalID: 847563532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_39
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 131
+        width: 45
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a4ac027cb51a440a234e9b44299d69
+      internalID: 1008722489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_40
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 131
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e2761eed0c0ff41a8eb25bacb7f5c0
+      internalID: -149966495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_41
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 163
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea903ac961778f489b4fd25f86175ff
+      internalID: -222108282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_42
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 146
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cd8b054cda5454da85a1eb1c9165b8
+      internalID: 109641389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_43
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 161
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7c2d2156cb7cb46ba3bff517928ee8
+      internalID: -550413822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_44
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 148
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73099de9cf98a28499cbeb4b140615db
+      internalID: 452759147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 148
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5545d02505dbc43ab104ba5615eb04
+      internalID: -1749720575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_46
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 148
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007b55015d20d1f4988c446e25602e2e
+      internalID: 1261543338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_47
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 148
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcc2fff1662ab64a85d9c3af09a7025
+      internalID: 1566273718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_48
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 148
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb372a2b76cc862489b8b942ee35133c
+      internalID: 1880026306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_49
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 145
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bb3f16e141aec41a270fabdce8e1c4
+      internalID: -1163549506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_50
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 134
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5e5c2ad0cbfcb4a990c4cc8204e64c
+      internalID: -1115757369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_51
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 17
+        width: 29
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247bfa7fe264fbd4b989ddd3f7468b50
+      internalID: -1242671476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 21
+        width: 46
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedfec2822b5f104c900cf6f38005160
+      internalID: 207125295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_53
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 30
+        width: 46
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd0afbab61d43f4f8ece30abd8460f2
+      internalID: 581612079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_54
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 30
+        width: 54
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8060294014f6c43a46db311be4b175
+      internalID: 2115887818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_55
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 28
+        width: 84
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e489d9e037360b4ba7dc02ac1d94e0e
+      internalID: -2033715978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_56
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 50
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74a062f91c68f64da81d35fbcd744ce
+      internalID: 1944757576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_57
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 48
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88748f1faa49d84c84616c2b1bce0b5
+      internalID: -411883839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_58
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 32
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b571b1bc54817428fdcb25df594f25
+      internalID: -1879167006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man-fococlipping-standard (1)_59
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 15
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f612999b1f6bfc4a937f1fdbe5d8ac6
+      internalID: 1622106928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Man-fococlipping-standard (1)_43: -550413822
+      Man-fococlipping-standard (1)_20: -1372601218
+      Man-fococlipping-standard (1)_6: -1680499845
+      Man-fococlipping-standard (1)_52: 207125295
+      Man-fococlipping-standard (1)_51: -1242671476
+      Man-fococlipping-standard (1)_55: -2033715978
+      Man-fococlipping-standard (1)_30: 566515549
+      Man-fococlipping-standard (1)_14: 690205751
+      Man-fococlipping-standard (1)_24: -911139940
+      Man-fococlipping-standard (1)_5: -678412918
+      Man-fococlipping-standard (1)_41: -222108282
+      Man-fococlipping-standard (1)_56: 1944757576
+      Man-fococlipping-standard (1)_49: -1163549506
+      Man-fococlipping-standard (1)_31: 1831538229
+      Man-fococlipping-standard (1)_50: -1115757369
+      Man-fococlipping-standard (1)_58: -1879167006
+      Man-fococlipping-standard (1)_42: 109641389
+      Man-fococlipping-standard (1)_18: -224281197
+      Man-fococlipping-standard (1)_1: -589223596
+      Man-fococlipping-standard (1)_16: 1149906574
+      Man-fococlipping-standard (1)_40: -149966495
+      Man-fococlipping-standard (1)_37: -1408965504
+      Man-fococlipping-standard (1)_45: -1749720575
+      Man-fococlipping-standard (1)_35: -845936571
+      Man-fococlipping-standard (1)_39: 1008722489
+      Man-fococlipping-standard (1)_48: 1880026306
+      Man-fococlipping-standard (1)_9: -1121378911
+      Man-fococlipping-standard (1)_23: 686450973
+      Man-fococlipping-standard (1)_59: 1622106928
+      Man-fococlipping-standard (1)_25: -534442081
+      Man-fococlipping-standard (1)_19: -1551671530
+      Man-fococlipping-standard (1)_53: 581612079
+      Man-fococlipping-standard (1)_3: 1669216687
+      Man-fococlipping-standard (1)_28: -144036554
+      Man-fococlipping-standard (1)_32: -1704920760
+      Man-fococlipping-standard (1)_13: -318763201
+      Man-fococlipping-standard (1)_4: 1287308680
+      Man-fococlipping-standard (1)_38: 847563532
+      Man-fococlipping-standard (1)_2: -783495117
+      Man-fococlipping-standard (1)_26: 1304951096
+      Man-fococlipping-standard (1)_10: -353051129
+      Man-fococlipping-standard (1)_46: 1261543338
+      Man-fococlipping-standard (1)_8: -2027251360
+      Man-fococlipping-standard (1)_47: 1566273718
+      Man-fococlipping-standard (1)_57: -411883839
+      Man-fococlipping-standard (1)_34: -2023045986
+      Man-fococlipping-standard (1)_22: -413409596
+      Man-fococlipping-standard (1)_29: 1276211240
+      Man-fococlipping-standard (1)_17: 675523158
+      Man-fococlipping-standard (1)_33: 1525609996
+      Man-fococlipping-standard (1)_12: -1665147866
+      Man-fococlipping-standard (1)_21: -510265193
+      Man-fococlipping-standard (1)_54: 2115887818
+      Man-fococlipping-standard (1)_11: -1773204529
+      Man-fococlipping-standard (1)_36: 1507204881
+      Man-fococlipping-standard (1)_0: 120700319
+      Man-fococlipping-standard (1)_27: -1722308113
+      Man-fococlipping-standard (1)_7: -380172332
+      Man-fococlipping-standard (1)_44: 452759147
+      Man-fococlipping-standard (1)_15: 811012473
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
