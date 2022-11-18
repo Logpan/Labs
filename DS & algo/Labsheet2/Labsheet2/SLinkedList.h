@@ -30,6 +30,7 @@ public:
     int remove(T t_element) override;
     void moveLastToFront();
     void unique();
+    void makeNewHead(Iterator& t_position);
 
     // Member functions specific to SLinkedList
     SListNode<T>* head() const;

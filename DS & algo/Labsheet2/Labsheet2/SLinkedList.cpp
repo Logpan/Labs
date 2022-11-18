@@ -106,27 +106,25 @@ void SLinkedList<T>::insertBefore(Iterator& t_position, T t_element)
 	}
 }
 
+//S_Q2. Add a new member function to the SLinkedList class 
 template <typename T>
 void SLinkedList<T>::moveLastToFront()
 {
-	if (this->m_tail != this->m_head.get())
+	if (this->m_tail != m_head.get())
 	{
-		SListNode<T>* newTail = this->m_head.get();
-		while (newTail->next().get() != this->m_tail)
+		SListNode<T>* newTail = m_head.get();
+		while (newTail->next().get() != m_tail)
 		{
 			newTail = newTail->next().get();
 		}
-		this->m_head.swap(this->m_tail->next());
+		m_head.swap(m_tail->next());
 		m_head.swap(newTail->next());
 		m_tail = newTail;
-		//m_head->setNext(m_tail->next());
-		//std::swap(this->m_head, this->m_tail->next());
-		//this->m_tail.swap(newTail->next());
-
-
 	}
 }
 
+
+//S_Q3.Add a new member function to the SLinkedList class
 template <typename T>
 void SLinkedList<T>::unique()
 {
@@ -140,7 +138,35 @@ void SLinkedList<T>::unique()
 			{
 				Iterator temp(node->next().get());
 				remove(temp);
+				break;
 			}
+		}
+	}
+}
+
+template <typename T>
+void SLinkedList<T>::makeNewHead(Iterator& t_position)
+{
+	SListNode<T>* position = t_position.get();
+
+	SListNode<T>* temp = m_head.get();
+	if (t_position.get() != this->m_head.get())
+	{
+		if (t_position.get() == m_tail)
+		{
+			moveLastToFront();
+		}
+		else
+		{
+			while (temp->next().get() != t_position.get())
+			{
+				temp = temp->next().get();
+			}
+			std::unique_ptr<SListNode<T>> newNode = std::make_unique<SListNode<T>>(t_position.get()->element(), this);
+			newNode.swap(m_head);
+			position->setNext(newNode->next());
+			temp->setNext(newNode);
+			m_head->setNext(newNode->next());	
 		}
 	}
 }
