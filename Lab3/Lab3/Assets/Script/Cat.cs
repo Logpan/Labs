@@ -17,6 +17,7 @@ public enum States
 
 public class Cat : MonoBehaviour
 {
+    public GameUI gameUI;
     public Rigidbody2D rig;
     public Animator anim;
     public BoxCollider2D boxCollider;
@@ -24,7 +25,7 @@ public class Cat : MonoBehaviour
     public LayerMask groundLayer;
     float horizontalInput;
 
-    float jumpVerticalPushOff = 5;
+    float jumpVerticalPushOff = 10;
     Vector2 savedlocalScale;
 
     float horizonatlSpeed = 1;
@@ -36,6 +37,7 @@ public class Cat : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         savedlocalScale = transform.localScale;
+        gameUI.HideAndShowEnd(false);
     }
 
     // Update is called once per frame
@@ -70,6 +72,8 @@ public class Cat : MonoBehaviour
 
         if(state == States.Walking)
         {
+            horizonatlSpeed = 1;
+
             if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
             {
                 state = States.Idle;
@@ -90,6 +94,7 @@ public class Cat : MonoBehaviour
         }
         else if (state == States.Running)
         {
+            horizonatlSpeed = 5;
             if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow) || !Input.GetKey(KeyCode.LeftShift))
             {
                 state = States.Walking;
@@ -121,16 +126,29 @@ public class Cat : MonoBehaviour
             if (IsGrounded())
                 state = States.Idle;
         }
-
-        else if (state == States.Dead)
+        else if(state == States.Hurt)
         {
-
+            state = States.Idle;
         }
 
-        rig.velocity = new Vector2(horizontalInput * horizonatlSpeed, rig.velocity.y);
+        if (state != States.Dead)
+        {
+            rig.velocity = new Vector2(horizontalInput * horizonatlSpeed, rig.velocity.y);
+        }else if (state == States.Dead)
+        {
+            StartCoroutine(End());
+        }
 
         anim.SetInteger("State", (int)state);
     }
+
+    IEnumerator End()
+    {
+        new WaitForSeconds(2);
+        gameUI.HideAndShowEnd(true);
+        yield return null;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Box")
@@ -140,6 +158,7 @@ public class Cat : MonoBehaviour
                 if( (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x < 0 && rig.velocity.x < 0) || (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x > 0 && rig.velocity.x > 0))
                 {
                     score += 1;
+                    gameUI.UpdateScore(score);
                 }
                 else
                 {
@@ -160,6 +179,7 @@ public class Cat : MonoBehaviour
                 lives--;
                 anim.SetInteger("State", (int)state);
             }
+            gameUI.UpdateLives(lives);
             Destroy(collision.gameObject);
         }
 
