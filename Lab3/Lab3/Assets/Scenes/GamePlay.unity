@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91de12a2186013b49adb02f2949cccea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameUI: {fileID: 0}
+  gameUI: {fileID: 908900306}
   rig: {fileID: 0}
   anim: {fileID: 0}
   boxCollider: {fileID: 0}

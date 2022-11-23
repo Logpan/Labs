@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Plane.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\Script\GameController.cs" />
     <Compile Include="Assets\Script\SettingsUI.cs" />
     <Compile Include="Assets\Script\Dead.cs" />
     <Compile Include="Assets\Script\MenuUI.cs" />
