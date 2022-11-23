@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Year3\ds & algo\VectorTry\VectorTry\Source.cpp(4,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  VectorTry.vcxproj -> C:\Year3\ds & algo\VectorTry\x64\Debug\VectorTry.exe

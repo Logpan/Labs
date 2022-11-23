@@ -1,0 +1,16 @@
+﻿  Source.cpp
+C:\Year3\Project\Test\Test\Source.cpp(107,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Year3\Project\Test\Test\Source.cpp(115,88): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Year3\Project\Test\Test\Source.cpp(146,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Year3\Project\Test\Test\Source.cpp(154,66): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Year3\Project\Test\Test\Source.cpp(161,27): warning C4018: '<': signed/unsigned mismatch
+C:\Year3\Project\Test\Test\Source.cpp(164,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Test.vcxproj -> C:\Year3\Project\Test\Debug\Test.exe

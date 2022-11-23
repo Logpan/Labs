@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Year3\Project\Map\Map\Source.cpp(24,7): error C2065: 'sReturn': undeclared identifier
+C:\Year3\Project\Map\Map\Source.cpp(25,5): error C2065: 'sReturn': undeclared identifier
+C:\Year3\Project\Map\Map\Source.cpp(27,5): error C2065: 'sReturn': undeclared identifier
+C:\Year3\Project\Map\Map\Source.cpp(45,15): error C2065: 'sReturn': undeclared identifier
+C:\Year3\Project\Map\Map\Source.cpp(48,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
