@@ -1,3 +1,7 @@
+mysql -u adventureuser -p AdventureDB
+
+MariaDB [AdventureDB]> show tables;
+
 create table player (
 	id int not null auto_increment primary key,
 	name varchar(64) not null,
