@@ -61,6 +61,7 @@
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\MovementStudent.cs" />
+    <Compile Include="Assets\Scenes\SC_LoginSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

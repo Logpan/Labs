@@ -26,11 +26,4 @@ public class MovementStudent : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
 }

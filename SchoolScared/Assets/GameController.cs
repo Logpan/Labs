@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
         do
         {
             rand = Random.Range(0, classrooms.Count);
-        }while(classroom != null && classroom != classrooms[rand]);
+        }while(classroom != null && classroom == classrooms[rand]);
 
         classroom = classrooms[rand];
 
@@ -35,8 +35,8 @@ public class GameController : MonoBehaviour
     IEnumerator time()
     {
         bTime = false;
-        yield return new WaitWhile(() => classroom.transform.GetChild(0).childCount != 0);
-        oldTime = Time.time + 20;
+        yield return new WaitWhile(() => classroom.transform.GetChild(0).GetChild(0).transform.position.x != classroom.transform.GetChild(0).transform.position.x);
+        oldTime = Time.time + 5;
         bTime = true;
     }
     // Update is called once per frame
@@ -46,7 +46,6 @@ public class GameController : MonoBehaviour
         {
             ChangeClassroom();
             StartCoroutine(time());
-            oldTime = Time.time + 20;
         }
     }
 }
