@@ -48,6 +48,7 @@ public class SC_LoginSystem : MonoBehaviour
         {
             panelRegister.SetActive(false);
             panelLogin.SetActive(true);
+
         }
         else
         {
