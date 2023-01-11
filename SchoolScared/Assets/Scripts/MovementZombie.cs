@@ -12,6 +12,7 @@ public class MovementZombie : MonoBehaviour
     GameObject currentWaypoint;
     public GameObject dirMarker;
     public GameObject dirMarker2;
+    Transform player;
 
 
 
@@ -23,6 +24,7 @@ public class MovementZombie : MonoBehaviour
         agent.updateUpAxis = false;
         currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
         agent.SetDestination(currentWaypoint.transform.position);
+        player = GameObject.Find("Student").transform;
     }
 
     bool CheckPosition()
@@ -46,18 +48,21 @@ public class MovementZombie : MonoBehaviour
 
         Vector2 airplanelookDirection = dirMarker.transform.position - transform.position;
 
-        Vector2 airplanetoGreenShipDir = dirMarker2.transform.position - transform.position;
+        Vector2 airplanetoGreenShipDir = player.position - transform.position;
         float theta = Mathf.Acos(Vector2.Dot(airplanelookDirection, airplanetoGreenShipDir) / (airplanelookDirection.magnitude * airplanetoGreenShipDir.magnitude));
         theta = theta * Mathf.Rad2Deg;
-       
+        //Debug.Log(theta);
+
         //float dotp = Vector2.Dot(airplanelookDirection, airplanetoGreenShipDir);
         if (theta < 90 / 2)
         {
             transform.GetChild(1).transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+            //Debug.DrawLine(transform.position, player.position, Color.red);
         }
         else
         {
             transform.GetChild(1).transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 1, 0);
+            //Debug.DrawLine(transform.position, player.position, Color.green);
         }
         return false;
     }
@@ -68,7 +73,22 @@ public class MovementZombie : MonoBehaviour
         CheckStudent();
         if(CheckPosition())
         {
-            agent.SetDestination(currentWaypoint.transform.position);
+           // agent.SetDestination(currentWaypoint.transform.position);
         }
+        isFront();
+    }
+
+    bool isFront()
+    {
+        Vector2 directionOfPlayer = transform.position - player.position;
+        float angle = Vector2.Angle(transform.forward, directionOfPlayer);
+        Debug.Log(angle);
+        Debug.Log(player.position);
+        if(Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 270)
+        {
+            Debug.DrawLine(transform.position, player.position, Color.red);
+            return true;
+        }
+        return false;
     }
 }
