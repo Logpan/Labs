@@ -77,6 +77,13 @@ public class SC_LoginSystem : MonoBehaviour
 
     }
 
+    public void Back()
+    {
+        currentWindow = CurrentWindow.Login;
+        panelRegister.SetActive(false);
+        panelLogin.SetActive(true);
+    }
+
     IEnumerator RegisterEnumerator()
     {
         isWorking = true;
@@ -157,6 +164,7 @@ public class SC_LoginSystem : MonoBehaviour
                     isLoggedIn = true;
                     loginError.text = "success";
                     ResetValues();
+                    loginError.text = "success to log";
                 }
                 else
                 {
