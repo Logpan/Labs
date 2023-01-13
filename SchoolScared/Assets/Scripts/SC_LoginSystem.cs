@@ -32,9 +32,9 @@ public class SC_LoginSystem : MonoBehaviour
     string registerUsername = "";
     string errorMessage = "";
 
-    bool isWorking = false;
-    bool registrationCompleted = false;
-    bool isLoggedIn = false;
+    //bool isWorking = false;
+    //bool registrationCompleted = false;
+    //bool isLoggedIn = false;
 
     //Logged-in user data
     string userName = "";
@@ -86,8 +86,8 @@ public class SC_LoginSystem : MonoBehaviour
 
     IEnumerator RegisterEnumerator()
     {
-        isWorking = true;
-        registrationCompleted = false;
+        //isWorking = true;
+        //registrationCompleted = false;
         errorMessage = "";
         registerEmail = emailRegister.text;
         registerUsername = username.text;
@@ -114,7 +114,7 @@ public class SC_LoginSystem : MonoBehaviour
                 if (responseText.StartsWith("Success"))
                 {
                     ResetValues();
-                    registrationCompleted = true;
+                    //registrationCompleted = true;
                     currentWindow = CurrentWindow.Login;
                     loginError.text = responseText;
                     panelRegister.SetActive(false);
@@ -128,13 +128,13 @@ public class SC_LoginSystem : MonoBehaviour
             }
         }
 
-        isWorking = false;
+       // isWorking = false;
     }
 
     IEnumerator LoginEnumerator()
     {
-        isWorking = true;
-        registrationCompleted = false;
+        //isWorking = true;
+        //registrationCompleted = false;
         errorMessage = "";
 
         loginEmail = email.text;
@@ -161,7 +161,7 @@ public class SC_LoginSystem : MonoBehaviour
                     string[] dataChunks = responseText.Split('|');
                     userName = dataChunks[1];
                     userEmail = dataChunks[2];
-                    isLoggedIn = true;
+                    //isLoggedIn = true;
                     loginError.text = "success";
                     ResetValues();
                     loginError.text = "success to log";
@@ -174,7 +174,7 @@ public class SC_LoginSystem : MonoBehaviour
             }
         }
 
-        isWorking = false;
+        //isWorking = false;
     }
 
     void ResetValues()

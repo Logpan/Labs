@@ -76,10 +76,7 @@ public class MovementZombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(agent.velocity.x > 0 && direction == Direction.Backward);
-        Debug.Log(agent.velocity.x + " " + direction);
-
-        if (agent.velocity.x < 0 && direction == Direction.Forward && transform.rotation.y == 0)
+        if (agent.velocity.x < 0 && direction == Direction.Forward)
         {
             transform.Rotate(new Vector3(0,180,0));
             direction = Direction.Backward;
@@ -101,13 +98,14 @@ public class MovementZombie : MonoBehaviour
     {
         Vector2 directionOfPlayer = transform.position - player.position;
         float angle = Vector2.Angle(transform.up, directionOfPlayer);
-        //Debug.Log(transform.up);
-//        Debug.Log(player.position);
-        if(Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 120)
-        {
-            Debug.DrawLine(transform.position, player.position, Color.red);
-            return true;
-        }
+
+        //Debug.Log(angle);
+        if((directionOfPlayer.x < 0 || direction == Direction.Backward) && (directionOfPlayer.x > 0 || direction == Direction.Forward))
+            if (Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 120)
+            {
+                Debug.DrawLine(transform.position, player.position, Color.red);
+                return true;
+            }
         return false;
     }
 }
