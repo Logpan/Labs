@@ -3,8 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+
+
 public class MovementZombie : MonoBehaviour
 {
+    enum States
+    {
+        Walk = 0,
+        Eat = 1
+    }
+
     Rigidbody2D rb;
     public float speed;
     NavMeshAgent agent;
@@ -14,6 +23,10 @@ public class MovementZombie : MonoBehaviour
     public GameObject dirMarker2;
     public List<GameObject> players = new List<GameObject>();
     Direction direction;
+    States state;
+    public Animator anim;
+    
+    
 
     enum Direction
     {
@@ -62,6 +75,16 @@ public class MovementZombie : MonoBehaviour
            agent.SetDestination(currentWaypoint.transform.position);
         }
         isFront();
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Student")
+        {
+            state = States.Eat;
+            anim.SetInteger("State", (int)state);
+        }
+            
     }
 
     bool isFront()
