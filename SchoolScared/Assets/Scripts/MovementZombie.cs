@@ -12,7 +12,7 @@ public class MovementZombie : MonoBehaviour
     GameObject currentWaypoint;
     public GameObject dirMarker;
     public GameObject dirMarker2;
-    Transform player;
+    public List<GameObject> players = new List<GameObject>();
     Direction direction;
 
     enum Direction
@@ -30,7 +30,7 @@ public class MovementZombie : MonoBehaviour
         agent.updateUpAxis = false;
         currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
         agent.SetDestination(currentWaypoint.transform.position);
-        player = GameObject.Find("Student").transform;
+        //player = GameObject.Find("Student").transform;
     }
 
     bool CheckPosition()
@@ -42,36 +42,6 @@ public class MovementZombie : MonoBehaviour
         }
         return false;
     }
-
-    //bool CheckStudent()
-    //{
-    //   /* Vector2 a = new Vector2(-3, 5);
-    //    Vector2 b = new Vector2(10, 1);
-
-    //    float dotProduct = Vector2.Dot(a, b);*/
-
-        
-
-    //    Vector2 airplanelookDirection = dirMarker.transform.position - transform.position;
-
-    //    Vector2 airplanetoGreenShipDir = player.position - transform.position;
-    //    float theta = Mathf.Acos(Vector2.Dot(airplanelookDirection, airplanetoGreenShipDir) / (airplanelookDirection.magnitude * airplanetoGreenShipDir.magnitude));
-    //    theta = theta * Mathf.Rad2Deg;
-    //    //Debug.Log(theta);
-
-    //    //float dotp = Vector2.Dot(airplanelookDirection, airplanetoGreenShipDir);
-    //    if (theta < 90 / 2)
-    //    {
-    //        transform.GetChild(1).transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
-    //        //Debug.DrawLine(transform.position, player.position, Color.red);
-    //    }
-    //    else
-    //    {
-    //        transform.GetChild(1).transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 1, 0);
-    //        //Debug.DrawLine(transform.position, player.position, Color.green);
-    //    }
-    //    return false;
-    //}
 
     // Update is called once per frame
     void Update()
@@ -96,16 +66,23 @@ public class MovementZombie : MonoBehaviour
 
     bool isFront()
     {
-        Vector2 directionOfPlayer = transform.position - player.position;
-        float angle = Vector2.Angle(transform.up, directionOfPlayer);
+        foreach(GameObject player in players)
+        {
+            Vector2 directionOfPlayer = transform.position - player.transform.position;
+            float angle = Vector2.Angle(transform.up, directionOfPlayer);
 
-        //Debug.Log(angle);
-        if((directionOfPlayer.x < 0 || direction == Direction.Backward) && (directionOfPlayer.x > 0 || direction == Direction.Forward))
-            if (Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 120)
+            //Debug.Log(directionOfPlayer.x);
+            if ((directionOfPlayer.x < 0 || direction == Direction.Backward) && (directionOfPlayer.x > 0 || direction == Direction.Forward))
             {
-                Debug.DrawLine(transform.position, player.position, Color.red);
-                return true;
+                if (Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 120 && directionOfPlayer.x > -4 && directionOfPlayer.x < 4)
+                {
+                    agent.SetDestination(player.transform.position);
+                    Debug.DrawLine(transform.position, player.transform.position, Color.red);
+                    return true;
+
+                }
             }
+        }
         return false;
     }
 }
