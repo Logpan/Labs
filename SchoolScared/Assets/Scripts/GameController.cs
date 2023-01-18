@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class GameController : MonoBehaviour
     bool bTime;
     float oldTime;
     GameObject classroom;
+    int iDeadStudent = 0;
+    bool end = false;
+    public TextMeshProUGUI loose;
 
     void ChangeClassroom()
     {
@@ -22,7 +26,8 @@ public class GameController : MonoBehaviour
 
         foreach(GameObject s in students)
         {
-            s.GetComponent<MovementStudent>().randomChair(classroom);
+            if(s.GetComponent<MovementStudent>().dead == false)
+                s.GetComponent<MovementStudent>().randomChair(classroom);
         }
     }
     // Start is called before the first frame update
@@ -30,6 +35,7 @@ public class GameController : MonoBehaviour
     {
         bTime = true;
         oldTime = Time.time;
+        loose.enabled = false;
     }
 
     IEnumerator time()
@@ -42,10 +48,27 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bTime && oldTime < Time.time)
+        if (end == false)
         {
-            ChangeClassroom();
-            StartCoroutine(time());
+            if (bTime && oldTime < Time.time)
+            {
+                ChangeClassroom();
+                StartCoroutine(time());
+            }
+             iDeadStudent = 0;
+            foreach (GameObject s in students)
+            {
+                if (s.GetComponent<MovementStudent>().dead == true)
+                {
+                    iDeadStudent++;
+                }
+            }
+            if(students.Count - 1  == iDeadStudent)
+            {
+                end = true;
+                loose.enabled = true;
+                Time.timeScale = 0;
+            }
         }
     }
 }

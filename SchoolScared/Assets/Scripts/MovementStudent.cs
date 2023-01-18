@@ -29,12 +29,20 @@ public class MovementStudent : MonoBehaviour
     public void randomChair(GameObject classroom)
     {
         int rand;
-        do
+        if (classroom.transform.GetChild(0).childCount == 0)
         {
-            rand = Random.Range(0, classroom.transform.childCount);
-        } while (classroom.transform.GetChild(rand).childCount > 0);
-        transform.parent = classroom.transform.GetChild(rand);
-        agent.SetDestination(classroom.transform.GetChild(rand).position);
+            transform.parent = classroom.transform.GetChild(0);
+            agent.SetDestination(classroom.transform.GetChild(0).position);
+        }
+        else
+        {
+            do
+            {
+                rand = Random.Range(0, classroom.transform.childCount);
+            } while (classroom.transform.GetChild(rand).childCount > 0);
+            transform.parent = classroom.transform.GetChild(rand);
+            agent.SetDestination(classroom.transform.GetChild(rand).position);
+        }
     }
 
 

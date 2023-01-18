@@ -108,4 +108,4 @@ public class MovementZombie : MonoBehaviour
         }
         return false;
     }
-}
+} 
