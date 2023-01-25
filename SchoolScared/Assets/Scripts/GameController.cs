@@ -9,10 +9,13 @@ public class GameController : MonoBehaviour
     public List<GameObject> students = new List<GameObject>();
     bool bTime;
     float oldTime;
+    float endGameTime;
     GameObject classroom;
     int iDeadStudent = 0;
     bool end = false;
+    
     public TextMeshProUGUI loose;
+    public TextMeshProUGUI win;
 
     void ChangeClassroom()
     {
@@ -36,6 +39,8 @@ public class GameController : MonoBehaviour
         bTime = true;
         oldTime = Time.time;
         loose.enabled = false;
+        win.enabled = false;
+        endGameTime = Time.time + 60;
     }
 
     IEnumerator time()
@@ -48,8 +53,14 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (end == false)
         {
+            if (endGameTime < Time.time)
+            {
+                end = true;
+                win.enabled = true;
+            }
             if (bTime && oldTime < Time.time)
             {
                 ChangeClassroom();

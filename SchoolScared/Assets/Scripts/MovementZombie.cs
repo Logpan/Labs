@@ -84,10 +84,21 @@ public class MovementZombie : MonoBehaviour
             state = States.Eat;
             anim.SetInteger("State", (int)state);
         }
+        else if (col.gameObject.tag == "Bullet")
+        {
+            agent.SetDestination(this.transform.position);
+        }
             
     }
 
-    bool isFront()
+    IEnumerator time()
+    {
+        float time = Time.time + 5; 
+        yield return new WaitWhile(() => Time.time > time );
+        agent.SetDestination(currentWaypoint.transform.position);
+    }
+
+        bool isFront()
     {
         foreach(GameObject player in players)
         {

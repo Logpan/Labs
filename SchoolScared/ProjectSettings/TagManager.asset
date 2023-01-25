@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Student
   - Zombie
+  - Bullet
   layers:
   - Default
   - TransparentFX
