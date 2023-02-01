@@ -87,14 +87,16 @@ public class MovementZombie : MonoBehaviour
         else if (col.gameObject.tag == "Bullet")
         {
             agent.SetDestination(this.transform.position);
+            StartCoroutine(time());
         }
             
     }
 
     IEnumerator time()
     {
-        float time = Time.time + 5; 
-        yield return new WaitWhile(() => Time.time > time );
+        //float time = Time.time + 5; 
+       // yield return new WaitWhile(() => Time.time > time );
+        yield return new WaitForSeconds(5);
         agent.SetDestination(currentWaypoint.transform.position);
     }
 

@@ -60,6 +60,7 @@ public class GameController : MonoBehaviour
             {
                 end = true;
                 win.enabled = true;
+                Time.timeScale = 0;
             }
             if (bTime && oldTime < Time.time)
             {
