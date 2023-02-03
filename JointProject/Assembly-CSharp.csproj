@@ -56,11 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Download\Ruccho\FangAutoTile\Sample\OnMapPlayerController.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\LevelSelector.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Download\Ruccho\FangAutoTile\Sample\OnMapPlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\cameraFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -852,13 +853,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="FangAutoTile.Editor.csproj">
-      <Project>{857905BC-F514-119C-A934-DA1A1D71E055}</Project>
-      <Name>FangAutoTile.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="FangAutoTile.csproj">
       <Project>{A96D8765-E206-64D9-D51E-17294DDAC32A}</Project>
       <Name>FangAutoTile</Name>
+    </ProjectReference>
+    <ProjectReference Include="FangAutoTile.Editor.csproj">
+      <Project>{857905BC-F514-119C-A934-DA1A1D71E055}</Project>
+      <Name>FangAutoTile.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
