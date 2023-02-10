@@ -58,10 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\cameraFollow.cs" />
     <Compile Include="Assets\Download\Ruccho\FangAutoTile\Sample\OnMapPlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\cameraFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEditor.VersionControl.Asset;
@@ -8,21 +9,25 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rig;
     //public Animator anim;
-    public BoxCollider2D capsuleCollider;
+    public CapsuleCollider2D capsuleCollider;
     //public States state;
+    Vector3 respawnPoint;
     public LayerMask groundLayer;
     float horizontalInput;
-
+    GameObject collided;
     float jumpVerticalPushOff = 5;
     Vector2 savedlocalScale;
+    public Vector3 nextTileToBreak;
+    KeyCode lastKeyPressed;
 
     float horizonatlSpeed = 3;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
-        capsuleCollider = GetComponent<BoxCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
         savedlocalScale = transform.localScale;
+        respawnPoint = transform.localPosition;
     }
 
 
@@ -41,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector2(-savedlocalScale.x, savedlocalScale.y);
         }
 
+        CheckDirection();
+
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rig.velocity = new Vector2(rig.velocity.x, jumpVerticalPushOff);
@@ -49,22 +56,50 @@ public class PlayerMovement : MonoBehaviour
         {
             rig.velocity = new Vector2(horizontalInput * horizonatlSpeed, rig.velocity.y);
         }
+
+        Diggable();
+        if (collided != null)
+        {
+            if (collided.name == "CheckPoint")
+            {
+                respawnPoint = transform.position;
+            }
+
+            
+            //if (IsGrounded())
+            //{
+            //    if (Input.GetKeyDown(KeyCode.Q))
+            //    {
+            //        Debug.Log("Q press");
+            //    }
+
+                if (collided.name == "Diggable" && (Input.GetKeyDown(KeyCode.Q) || nextTileToBreak == Vector3.up + Vector3.up))
+                {
+                    collided.GetComponent<Tilemap>().SetTile(collided.GetComponent<Tilemap>().WorldToCell(transform.position + nextTileToBreak), null);
+                }
+            //}
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void CheckDirection()
     {
-        if (collision.gameObject.name == "Diggable")
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            collision.gameObject.GetComponent<Tilemap>().SetTile(collision.gameObject.GetComponent<Tilemap>().WorldToCell(gameObject.transform.position), null);
+            nextTileToBreak = Vector2.right;
         }
-        if (!IsGrounded())
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-
-            Debug.Log("Touch");
-            StartCoroutine(Fall());
+            nextTileToBreak = Vector2.left;
+        }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            nextTileToBreak = Vector2.up + Vector2.up;
+        }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            nextTileToBreak = Vector2.down;
         }
     }
-
 
     IEnumerator Fall()
     {
@@ -78,6 +113,18 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
+    }
+
+    private void Diggable()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0, nextTileToBreak, 0.1f, groundLayer);
+        if (raycastHit.collider != null)
+        {
+            collided = raycastHit.collider.gameObject;
+            Debug.Log(raycastHit.collider.isTrigger);
+        }
+        else
+            collided = null;
     }
 
 
