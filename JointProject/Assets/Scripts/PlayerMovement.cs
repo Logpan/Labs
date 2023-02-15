@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     //public Animator anim;
     public CapsuleCollider2D capsuleCollider;
     //public States state;
-    Vector3 respawnPoint;
+    public Vector3 respawnPoint;
     public LayerMask groundLayer;
     float horizontalInput;
     GameObject collided;
@@ -115,13 +115,22 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if(collision.gameObject.name == "CheckPoint")
+        {
+            respawnPoint = transform.position;
+        }
+    }
+
     private void Diggable()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0, nextTileToBreak, 0.1f, groundLayer);
         if (raycastHit.collider != null)
         {
             collided = raycastHit.collider.gameObject;
-            Debug.Log(raycastHit.collider.isTrigger);
+            //Debug.Log(raycastHit.collider.isTrigger);
         }
         else
             collided = null;
