@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Diggable
   - Ground
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -19,5 +19,11 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: ccd2628b50f6ca64994f446a43323e11
+    guid: 5a988a06aa68ddd4a813656cbcaa1514
+  - enabled: 1
+    path: Assets/Scenes/Loose.unity
+    guid: 7b85cf62b856e604eb34370de7a04596
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 003912d27becd644795b1a1477a359ed
   m_configObjects: {}

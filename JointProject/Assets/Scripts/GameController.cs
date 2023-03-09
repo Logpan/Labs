@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -18,5 +19,24 @@ public class GameController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void NextLevel()
+    {
+        if (level == 0)
+            level++;
+        else
+            Win();
+        SceneManager.LoadScene("Level" + level);
+    }
+
+    public void Loose()
+    {
+        SceneManager.LoadScene("Loose");
+    }
+
+    public void Win()
+    {
+        SceneManager.LoadScene("Loose");
     }
 }

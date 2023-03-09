@@ -4,30 +4,54 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEditor.VersionControl.Asset;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public enum States
+    {
+        Idle = 0,
+        Walk = 1,
+        Jump = 2,
+        Shoot = 3,
+        Dig = 4,
+    }
+
     public Rigidbody2D rig;
-    //public Animator anim;
+    public Animator anim;
     public CapsuleCollider2D capsuleCollider;
-    //public States state;
+    public States state;
     public Vector3 respawnPoint;
     public LayerMask groundLayer;
     float horizontalInput;
     GameObject collided;
+    float oldJump;
     float jumpVerticalPushOff = 5;
     Vector2 savedlocalScale;
     public Vector3 nextTileToBreak;
     KeyCode lastKeyPressed;
+    
+    
+    public int lives = 3;
+    public TextMeshProUGUI live;
+
+    public GameObject goBullet;
+    public TextMeshProUGUI Bullet;
+    int iBullet;
 
     float horizonatlSpeed = 3;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         savedlocalScale = transform.localScale;
         respawnPoint = transform.localPosition;
+        oldJump = jumpVerticalPushOff;
+        iBullet = 0;
+        Bullet.text = "Bullets : " + iBullet;
+        live.text = "Lives : " + lives;
+        state = States.Idle;
     }
 
 
@@ -40,10 +64,16 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput > 0.001f)
         {
             transform.localScale = new Vector2(savedlocalScale.x, savedlocalScale.y);
+            state = States.Walk;
         }
         else if (horizontalInput < -0.001f)
         {
             transform.localScale = new Vector2(-savedlocalScale.x, savedlocalScale.y);
+            state = States.Walk;
+        }
+        else
+        {
+            state = States.Idle;
         }
 
         CheckDirection();
@@ -51,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rig.velocity = new Vector2(rig.velocity.x, jumpVerticalPushOff);
+            state = States.Jump;
         }
         else
         {
@@ -60,25 +91,25 @@ public class PlayerMovement : MonoBehaviour
         Diggable();
         if (collided != null)
         {
-            if (collided.name == "CheckPoint")
+            if (collided.name == "Diggable" && (Input.GetKeyDown(KeyCode.Q) || nextTileToBreak == Vector3.up + Vector3.up))
             {
-                respawnPoint = transform.position;
+                collided.GetComponent<Tilemap>().SetTile(collided.GetComponent<Tilemap>().WorldToCell(transform.position + nextTileToBreak), null);
+                state = States.Dig;
             }
-
-            
-            //if (IsGrounded())
-            //{
-            //    if (Input.GetKeyDown(KeyCode.Q))
-            //    {
-            //        Debug.Log("Q press");
-            //    }
-
-                if (collided.name == "Diggable" && (Input.GetKeyDown(KeyCode.Q) || nextTileToBreak == Vector3.up + Vector3.up))
-                {
-                    collided.GetComponent<Tilemap>().SetTile(collided.GetComponent<Tilemap>().WorldToCell(transform.position + nextTileToBreak), null);
-                }
-            //}
         }
+
+        if(Input.GetKeyDown(KeyCode.F) && iBullet > 0)
+        {
+            Vector3 bulletPosition = new Vector3(gameObject.transform.position.x - transform.localScale.x + 0.1f, gameObject.transform.position.y + transform.localScale.y/2, 0);
+            GameObject bullet = Instantiate(goBullet, bulletPosition, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2((int)-transform.localScale.x*5,0);
+            Destroy(bullet, 2f);
+            iBullet--;
+            state = States.Shoot;
+            Bullet.text = "Bullets : " + iBullet;
+        }
+
+        anim.SetInteger("State", (int)state);
     }
 
     void CheckDirection()
@@ -117,10 +148,34 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if(collision.gameObject.name == "CheckPoint")
         {
             respawnPoint = transform.position;
+        }
+        else if(collision.gameObject.name == "Finish")
+        {
+            respawnPoint = new Vector3(0,0,0);
+            GameObject.Find("_GameController").GetComponent<GameController>().NextLevel();
+        }
+        else if (collision.gameObject.name == "Crates")
+        {
+            collision.GetComponent<Tilemap>().SetTile(collided.GetComponent<Tilemap>().WorldToCell(transform.position + nextTileToBreak), null);
+            iBullet += 5;
+            Bullet.text = "Bullets : " + iBullet;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            transform.position = respawnPoint;
+            lives--;
+            live.text = "Lives : " + lives;
+            if (lives == 0)
+            {
+                GameObject.Find("_GameController").GetComponent<GameController>().Loose();
+            }    
         }
     }
 
